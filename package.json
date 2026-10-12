@@ -1,6 +1,6 @@
 {
   "name": "dsh-client-ui-gitbar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Standalone Git branch, tag and remote toolbar for the official dsh Web UI.",
   "type": "module",
   "main": "lib/index.js",

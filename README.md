@@ -16,17 +16,17 @@
 
 已在 **@deepseek-ai/dsh 0.2.0-rc.1** 的官方 `web` profile 验证。需要 Node.js 22+、Git 和官方插件管理命令所使用的 pnpm；当前版本不提供 TUI 界面。
 
-在本目录执行 `npm pack` 得到 `dsh-client-ui-gitbar-1.1.0.tgz`，也可以使用仓库根目录 `npm run pack:plugins` 生成的安装包。然后用安装包的绝对路径安装：
+在本目录执行 `npm pack` 得到 `dsh-client-ui-gitbar-1.1.1.tgz`，也可以使用仓库根目录 `npm run pack:plugins` 生成的安装包。然后用安装包的绝对路径安装：
 
 ```bash
-dsh plugin --profile web add "/absolute/path/dsh-client-ui-gitbar-1.1.0.tgz"
+dsh plugin --profile web add "/absolute/path/dsh-client-ui-gitbar-1.1.1.tgz"
 dsh web
 ```
 
 Windows 示例：
 
 ```powershell
-dsh plugin --profile web add "E:\code\deepseek-harness-desktop\release\plugins\dsh-client-ui-gitbar-1.1.0.tgz"
+dsh plugin --profile web add "E:\code\deepseek-harness-desktop\release\plugins\dsh-client-ui-gitbar-1.1.1.tgz"
 dsh web
 ```
 
@@ -39,7 +39,7 @@ dsh plugin --profile web remove dsh-client-ui-gitbar
 独立仓库：[dsh-client-ui-gitbar](https://github.com/pucj0/dsh-client-ui-gitbar)。从 [GitHub Releases](https://github.com/pucj0/dsh-client-ui-gitbar/releases) 下载 tgz，或直接使用固定版本的 Release 地址安装：
 
 ```bash
-dsh plugin --profile web add https://github.com/pucj0/dsh-client-ui-gitbar/releases/download/v1.1.0/dsh-client-ui-gitbar-1.1.0.tgz
+dsh plugin --profile web add https://github.com/pucj0/dsh-client-ui-gitbar/releases/download/v1.1.1/dsh-client-ui-gitbar-1.1.1.tgz
 ```
 
 尚未发布到 npm registry。此目录本身可复制为独立仓库，保留 `lib/`、`package.json`、`cordis.patch.yml`、`README.md` 和 `LICENSE` 即可，不需要构建 Desktop。
@@ -48,7 +48,7 @@ dsh plugin --profile web add https://github.com/pucj0/dsh-client-ui-gitbar/relea
 
 包内提供 `/dsh-desktop/gitbar/*` 的 Git 后端；路径保留历史前缀，运行不依赖 Electron。工作区权限来自官方 `workspaceRegistry` 与 `profileContext`，每次请求重新读取已登记项目，只允许合法工作区及其发现的仓库。
 
-可选安装 `dsh-client-ui-review` 增加文件审查、Git Sidebar 与差异比较。安装两者时，标签菜单的“与当前比较”会打开 review 的 Git 标签；只装 gitbar 时不显示该入口。现有 `dsh.desktop.composer.actions` 子槽保留给兼容扩展，review 的入口直接使用官方槽位。
+可选安装 `dsh-client-ui-review` 增加文件审查、Git Sidebar 与差异比较。安装两者时，标签菜单的“与当前比较”会打开 review 的 Git 标签；只装 gitbar 时不显示该入口。`dsh.desktop.composer.actions` 子槽提供同排组合；review 单独安装时自带工具条，同时安装时自动加入 gitbar 的同一排。
 
 官方项目：[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)。本插件是社区扩展，许可证 MIT。
 

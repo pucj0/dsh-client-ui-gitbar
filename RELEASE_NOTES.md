@@ -1,8 +1,6 @@
-# v1.1.0
+# v1.1.1
 
-Standalone Git branch, tag and remote toolbar for the official dsh Web UI.
-
-- Standalone official dsh Web UI plugin; Electron and Desktop are not required.
-- Chinese and English UI, official workspace permissions and Git operations.
-- Tested separately and together with official dsh 0.2.0-rc.1.
-- Install the attached npm tarball with `dsh plugin --profile web add <tarball-path-or-URL>`.
+- Independent GitHub delivery and checksum assets.
+- Updated installation and composer integration documentation for review v1.1.1.
+- Tag releases preserve already-published immutable assets.
+- Standalone Git toolbar functionality remains compatible with v1.1.0.
